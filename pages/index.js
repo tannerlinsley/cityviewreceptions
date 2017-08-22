@@ -182,7 +182,7 @@ export default class Home extends Component {
           <div className="background" />
         </Events>
 
-        <div id="rates">
+        {/* <div id="rates">
           Rates -
           <br />Reception
           <br />$995 – Includes:
@@ -218,7 +218,7 @@ export default class Home extends Component {
           <br />
           <br />
           <br />
-        </div>
+        </div> */}
       </div>
     )
   }
