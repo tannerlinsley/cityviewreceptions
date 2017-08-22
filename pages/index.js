@@ -149,7 +149,7 @@ export default class Home extends Component {
                 </li>
               </ul>
             </Navbar>
-            <div className="byline">Ogden's premiere event center</div>
+            <div className="byline">Salt Lake City's premiere event center</div>
           </div>
         </Header>
         <About id="about">
