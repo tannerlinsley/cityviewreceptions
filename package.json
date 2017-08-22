@@ -1,0 +1,19 @@
+{
+  "name": "cityviewmemoriam",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/tannerlinsley/cityviewmemoriam.git",
+  "author": "Tanner Linsley <tannerlinsley@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "next",
+    "build": "next build && next export"
+  },
+  "dependencies": {
+    "next": "^3.0.6",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "styled-components": "^2.1.2",
+    "styled-reset": "^0.1.2"
+  }
+}
