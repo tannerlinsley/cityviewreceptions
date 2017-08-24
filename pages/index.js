@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { injectGlobal } from "styled-components";
 import reset from "styled-reset";
 //
+import Rates from "./home/Rates";
 
 injectGlobal`
   ${reset}
@@ -13,7 +14,7 @@ injectGlobal`
 `;
 
 const Header = styled.div`
-  height: 1000px;
+  height: 100vh;
   width: 100%;
   background: url(/static/img/party.jpg);
   background-position: center;
@@ -83,7 +84,7 @@ const Navbar = styled.div`
 `;
 
 const About = styled.div`
-  padding: 8rem 20rem;
+  padding: 5rem 2rem;
   line-height: 2rem;
   .header {
     font-size: 2rem;
@@ -91,14 +92,10 @@ const About = styled.div`
     text-align: center;
     margin-bottom: 2rem;
   }
-  .column {
-    max-width: 1500px;
-    margin: 0 auto 0 auto;
-    line-height: 1.65;
-    padding: 1rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .content {
+    width: 700px;
+    max-width: 100%;
+    margin: 0 auto;
   }
   .columnLeft {
     font-size: 1rem;
@@ -147,47 +144,7 @@ const Events = styled.div`
     margin-bottom: 2rem;
   }
 `;
-const Rates = styled.div`
-  padding: 8rem 2rem;
-  text-align: center;
 
-  .header {
-    font-size: 2rem;
-    line-height: 2.5rem;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .subHeader {
-    font-size: 1.5rem;
-  }
-  .column {
-    max-width: 1500px;
-    margin: 0 auto 0 auto;
-    line-height: 1.65;
-    padding: 1rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .columnLeft {
-    font-size: 1rem;
-    padding: 2rem 2rem;
-    border-right: 1px solid black;
-    line-height: 2rem;
-    text-align: left;
-  }
-  .columnRight {
-    font-size: 1rem;
-    padding: 1rem 2rem;
-    line-height: 2rem;
-    text-align: left;
-  }
-  .info {
-    font-size: 1rem;
-    font-style: italic;
-  }
-`;
 const Contact = styled.div`
   padding: 1rem 2rem;
   background: rgba(19, 18, 15, 0.75);
@@ -277,17 +234,19 @@ export default class Home extends Component {
         </Header>
         <About id="about">
           <div className="header">About</div>
-          In 1928, Salt Lake City Corporation deeded to American Abbey and
-          Mausoleum Company 6.5 acres north of the Salt Lake City Cemetery for
-          the construction of a mausoleum, crematorium, chapel and gardens.
-          Cecil E. Bryan, America’s foremost mausoleum architect was
-          commissioned to design and erect a stately temple built of stone,
-          marble, bronze, carved woods and stained glass that would withstand
-          the ravages of time and be a beacon of beauty and memory for Salt Lake
-          City. The property was named the Salt Lake Mausoleum and was dedicated
-          for the public in 1931. After a few changes in ownership, in 2015,
-          Salt Lake City Memoriam, LLC purchased the property and changed the
-          name to the City View Memoriam.
+          <div className="content">
+            In 1928, Salt Lake City Corporation deeded to American Abbey and
+            Mausoleum Company 6.5 acres north of the Salt Lake City Cemetery for
+            the construction of a mausoleum, crematorium, chapel and gardens.
+            Cecil E. Bryan, America’s foremost mausoleum architect was
+            commissioned to design and erect a stately temple built of stone,
+            marble, bronze, carved woods and stained glass that would withstand
+            the ravages of time and be a beacon of beauty and memory for Salt
+            Lake City. The property was named the Salt Lake Mausoleum and was
+            dedicated for the public in 1931. After a few changes in ownership,
+            in 2015, Salt Lake City Memoriam, LLC purchased the property and
+            changed the name to the City View Memoriam.
+          </div>
         </About>
 
         <Events id="events">
@@ -305,44 +264,7 @@ export default class Home extends Component {
           <div className="background" />
         </Events>
 
-        <Rates id="rates">
-          <div className="header">Rates</div>
-          <br />
-          <div className="column">
-            <div className="columnLeft">
-              <div className="subHeader">
-                <strong>Reception</strong>
-              </div>
-              <br />$995 – Includes:
-              <br />
-              <br />Use of the building for 5 hours
-              <br />Tables and chairs for 80, setup
-              <br />Linens
-              <br />One staff member for assistance during event
-              <div className="info">
-                <br />$100 of that $995 potentially refundable cleaning deposit
-                <br />$100 – additional hourly charge
-              </div>
-            </div>
-            <br />
-            <br />
-            <div className="columnRight">
-              <div className="subHeader">
-                <strong>Luncheon, memorial service, or family gathering</strong>
-              </div>
-              <br />$495 – Includes:
-              <br />
-              <br />Use of the building for 4 hours
-              <br />Tables and chairs for 80, setup
-              <br />Linens
-              <br />One staff member for assistance during event
-              <div className="info">
-                <br />$100 of that $495 potentially refundable cleaning deposit
-                <br />$100 – additional hourly charge
-              </div>
-            </div>
-          </div>
-        </Rates>
+        <Rates />
 
         <Contact id="contact">
           <div className="header">Contact Us</div>
