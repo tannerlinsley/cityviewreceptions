@@ -4,6 +4,9 @@ import { injectGlobal } from "styled-components";
 import reset from "styled-reset";
 //
 import Rates from "./home/Rates";
+import About from "./home/About";
+import Events from "./home/Events";
+import Contact from "./home/Contact";
 
 injectGlobal`
   ${reset}
@@ -83,114 +86,6 @@ const Navbar = styled.div`
   }
 `;
 
-const About = styled.div`
-  padding: 5rem 2rem;
-  line-height: 2rem;
-  .header {
-    font-size: 2rem;
-    line-height: 2.5rem;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  .content {
-    width: 700px;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-  .columnLeft {
-    font-size: 1rem;
-    padding: 2rem 2rem;
-    background: url(/static/img/aboutPic.jpeg);
-    line-height: 2rem;
-    text-align: left;
-  }
-  .columnRight {
-    font-size: 1rem;
-    padding: 1rem 2rem;
-    line-height: 2rem;
-    text-align: left;
-  }
-`;
-
-const Events = styled.div`
-  position: relative;
-  padding: 8rem 20rem;
-  line-height: 2rem;
-  background: url(/static/img/wine.jpg);
-  background-position: center;
-  background-size: cover;
-  color: white;
-
-  .content {
-    position: relative;
-    z-index: 1;
-    text-shadow: 0 0 2rem black, 0 0 2rem black;
-  }
-
-  .background {
-    z-index: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.4);
-  }
-
-  .header {
-    font-size: 2rem;
-    line-height: 2.5rem;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-`;
-
-const Contact = styled.div`
-  padding: 1rem 2rem;
-  background: rgba(19, 18, 15, 0.75);
-  background-position: center;
-  background-size: cover;
-  color: white;
-  text-align: center;
-
-  .header {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: .5rem;
-    text-shadow: 0 0 .05rem black, 0 0 .05rem black;
-  }
-
-  .column {
-    max-width: 1500px;
-    margin: 0 auto 0 auto;
-    line-height: 1.65;
-    padding: 1rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-shadow: 0 0 .08rem black, 0 0 .08rem black;
-  }
-  .columnLeft {
-    width: 15rem;
-    font-size: 1rem;
-    padding: .5rem 5rem;
-    margin-left: -9rem;
-    line-height: 2rem;
-  }
-  .columnRight {
-    font-size: 1rem;
-    padding: 1rem .5rem;
-    line-height: 2rem;
-  }
-  .contactBody {
-    font-size: 1rem;
-    font-style: italic;
-  }
-  .contactInfo {
-    font-size: 1.1rem;
-  }
-`;
-
 export default class Home extends Component {
   render() {
     return (
@@ -232,62 +127,13 @@ export default class Home extends Component {
             <div className="byline">Salt Lake City's premiere event center</div>
           </div>
         </Header>
-        <About id="about">
-          <div className="header">About</div>
-          <div className="content">
-            In 1928, Salt Lake City Corporation deeded to American Abbey and
-            Mausoleum Company 6.5 acres north of the Salt Lake City Cemetery for
-            the construction of a mausoleum, crematorium, chapel and gardens.
-            Cecil E. Bryan, America’s foremost mausoleum architect was
-            commissioned to design and erect a stately temple built of stone,
-            marble, bronze, carved woods and stained glass that would withstand
-            the ravages of time and be a beacon of beauty and memory for Salt
-            Lake City. The property was named the Salt Lake Mausoleum and was
-            dedicated for the public in 1931. After a few changes in ownership,
-            in 2015, Salt Lake City Memoriam, LLC purchased the property and
-            changed the name to the City View Memoriam.
-          </div>
-        </About>
+        <About />
 
-        <Events id="events">
-          <div className="content">
-            <div className="header">Events</div>
-            City View Memoriam provides a beautiful and elegant place to
-            celebrate your significant event, be it a wedding, memorial for a
-            departed loved one, or family gathering. Our grounds, buildings and
-            gardens stand as a highlight and foil to your important occasion.
-            The unparalleled view of the Salt Lake Valley provides not only the
-            finest view of our valley, but provides opportunities for
-            reflection. We invite you to come yourself and experience the
-            unparalleled beauty of our facilities.
-          </div>
-          <div className="background" />
-        </Events>
+        <Events />
 
         <Rates />
 
-        <Contact id="contact">
-          <div className="header">Contact Us</div>
-          <br />
-          <div className="column">
-            <div className="columnLeft">
-              <div className="contactBody">
-                Give us a call for more information about our building and
-                services. We are happy to assist you in planning your upcoming
-                event.
-              </div>
-            </div>
-            <br />
-            <div className="columnRight">
-              <div className="contactInfo">
-                <div>City View Memoriam</div>
-                <div>1001 East 11th Avenue</div>
-                <div>Salt Lake City, UT 84103</div>
-                <a href="tel:+18017466913">(801) 476 - 6913</a>
-              </div>
-            </div>
-          </div>
-        </Contact>
+        <Contact />
       </div>
     );
   }
