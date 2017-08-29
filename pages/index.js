@@ -48,18 +48,20 @@ const Header = styled.div`
   }
   .callButton {
     position: relative;
-    border-radius: .8rem;
     font-size: 1rem;
     color: white;
     margin: 3rem auto;
     max-width: 15rem;
-    display: inline-block;
+    display: inline-block, table-cell;
+    vertical-align: middle;
     padding: 1rem;
     line-height: 1.5rem;
     background-color: rgba(19, 18, 15, 0.75);
     box-shadow: 0 .3rem 1rem -.3rem rgba(0, 0, 0, 1);
     :hover {
-      background-color: lightgray;
+      background-color: rgba(37, 99, 164, 0.88);
+      border-radius: .3rem;
+      transition: .8s ease-out;
     }
   }
   a {
@@ -143,9 +145,7 @@ export default class Home extends Component {
             <br />
             <br />
             <br />
-            <div className="byline">
-              <strong>Salt Lake City's premiere event center</strong>
-            </div>
+            <div className="byline">Salt Lake City's premiere event center</div>
             <a href="tel:+18017466913">
               <div className="callButton">
                 <div>CALL NOW TO BOOK AN EVENT!</div>
