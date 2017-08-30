@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React, { Component } from 'react'
+import styled from 'styled-components'
 //
-import { List, Item } from "../components/Layout";
+import { List, Item } from '../components/Layout'
 
 const Rates = styled.div`
-  padding: 8rem 2rem;
+  padding: 8rem 0;
   text-align: center;
 
   .header {
@@ -18,11 +18,15 @@ const Rates = styled.div`
     font-size: 1.5rem;
     margin-bottom: 1rem;
   }
+
+  .price {
+    margin-bottom: 1rem;
+  }
+
   .content {
     max-width: 1500px;
     margin: 0 auto 0 auto;
     line-height: 1.65;
-    padding: 1rem 1rem;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -50,7 +54,7 @@ const Rates = styled.div`
     font-style: italic;
     opacity: 0.7;
   }
-`;
+`
 
 export default () =>
   <Rates id="rates">
@@ -60,7 +64,7 @@ export default () =>
         <div className="subHeader">
           <strong>Reception</strong>
         </div>
-        $995
+        <div className="price">$995</div>
         <List>
           <Item>Great for Weddings &amp; Anniversaries</Item>
           <Item>Use of the building for 5 hours</Item>
@@ -77,7 +81,7 @@ export default () =>
         <div className="subHeader">
           <strong>Gathering</strong>
         </div>
-        $495
+        <div className="price">$495</div>
         <List>
           <Item>Great for family reunions &amp; funeral services</Item>
           <Item>Use of the building for 4 hours</Item>
@@ -91,4 +95,4 @@ export default () =>
         </div>
       </div>
     </div>
-  </Rates>;
+  </Rates>

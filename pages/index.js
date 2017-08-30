@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { injectGlobal } from "styled-components";
-import reset from "styled-reset";
+import React, { Component } from 'react'
+import styled from 'styled-components'
+import { injectGlobal } from 'styled-components'
+import reset from 'styled-reset'
 //
-import Rates from "./home/Rates";
-import About from "./home/About";
-import Events from "./home/Events";
-import Contact from "./home/Contact";
+import Rates from './home/Rates'
+import About from './home/About'
+import Events from './home/Events'
+import Contact from './home/Contact'
 
 injectGlobal`
   ${reset}
@@ -14,7 +14,7 @@ injectGlobal`
     font-family: 'Lato', sans-serif;
     line-height: 1.3rem;
   }
-`;
+`
 
 const Header = styled.div`
   font-weight: 300;
@@ -24,9 +24,8 @@ const Header = styled.div`
   background-position: center;
   background-size: cover;
   position: relative;
-  text-align: center;
 
-  .background {
+  .gradient {
     z-index: 0;
     width: 100%;
     height: 50%;
@@ -35,132 +34,129 @@ const Header = styled.div`
   }
 
   .content {
+    height: 100%;
     position: relative;
     z-index: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid white;
+    flex-wrap: wrap;
+
+    .logo {
+      font-size: 3rem;
+      line-height: 3rem;
+      font-weight: 300;
+      text-align: left;
+      color: white;
+      padding: 1rem 1.5rem;
+      text-shadow: 0 0 2rem black, 0 0 2rem black;
+    }
+
+    .menu {
+      li {
+        display: inline-block;
+      }
+
+      a {
+        display: inline-block;
+        font-size: 1.1rem;
+        color: white;
+        text-decoration: none;
+        padding: 1rem;
+        text-shadow: 0 0 2rem black, 0 0 2rem black;
+        transition: all .15s ease-out;
+
+        :hover {
+          transform: translateY(-.2rem);
+          box-shadow: 0 15px -10px 0 white;
+        }
+      }
+    }
   }
 
   .byline {
-    margin-top: 6rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
     line-height: 3rem;
     font-size: 2.5rem;
     color: white;
     text-shadow: 0 0 .7rem black, 0 0 .7rem black;
-  }
-  .callButton {
-    position: relative;
-    font-size: 1rem;
-    color: white;
-    margin: 3rem auto;
-    max-width: 15rem;
-    display: inline-block, table-cell;
-    vertical-align: middle;
-    padding: 1rem;
-    line-height: 1.5rem;
-    background-color: rgba(19, 18, 15, 0.75);
-    box-shadow: 0 .3rem 1rem -.3rem rgba(0, 0, 0, 1);
-    :hover {
-      background-color: rgba(37, 99, 164, 0.88);
+
+    > div {
+      margin-bottom: 1rem;
+    }
+
+    .callButton {
+      text-decoration: none;
+      font-size: 1rem;
+      color: white;
+      max-width: 15rem;
+      display: inline-block, table-cell;
+      vertical-align: middle;
+      padding: 1rem;
+      line-height: 1.5rem;
+      background-color: rgba(19, 18, 15, 0.75);
+      box-shadow: 0 .3rem 1rem -.3rem rgba(0, 0, 0, 1);
+      transition: .3s ease-out;
       border-radius: .3rem;
-      transition: .8s ease-out;
+
+      :hover {
+        background-color: rgba(37, 99, 164, 0.88);
+      }
     }
   }
-  a {
-    text-decoration: none;
-  }
-`;
+`
 
-const Logo = styled.h1`
-  width: 80%;
-  position: relative;
-  z-index: 1;
-  font-size: 4rem;
-  font-weight: 300;
-  text-align: left;
-  color: white;
-  padding: 1.5rem;
-  text-shadow: 0 0 2rem black, 0 0 2rem black;
-  border-bottom: 1px solid white;
-  margin: 0 auto .5rem;
-`;
-
-const Navbar = styled.div`
-  position: relative;
-  z-index: 1;
-  color: white;
-  text-align: right;
-
-  li {
-    display: inline-block;
-  }
-
-  a {
-    display: inline-block;
-    font-size: 1.1rem;
-    color: white;
-    text-decoration: none;
-    padding: 1rem;
-    text-shadow: 0 0 2rem black, 0 0 2rem black;
-    transition: all .2s ease-out;
-
-    :hover {
-      transform: translateY(-.2rem);
-    }
-  }
-`;
 export default class Home extends Component {
   render() {
     return (
       <div>
         <Header>
-          <div className="background" />
+          <div className="gradient" />
           <div className="content">
-            <Logo>
-              City View
-              <br />
-              <br />
-              <br />
-              Memoriam
-              <Navbar>
-                <ul>
-                  <li>
-                    <a href="#about">About</a>
-                  </li>
-                  <li>
-                    <a href="#events">Events</a>
-                  </li>
-                  <li>
-                    <a href="#rates">Rates</a>
-                  </li>
-                  <li>
-                    <a href="#contact">Contact</a>
-                  </li>
-                </ul>
-              </Navbar>
-            </Logo>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <div className="byline">Salt Lake City's premiere event center</div>
-            <a href="tel:+18017466913">
-              <div className="callButton">
-                <div>CALL NOW TO BOOK AN EVENT!</div>
-              </div>
-            </a>
+            <div className="navbar">
+              <h1 className="logo">City View Memoriam</h1>
+              <ul className="menu">
+                <li>
+                  <a href="#about">About</a>
+                </li>
+                <li>
+                  <a href="#events">Events</a>
+                </li>
+                <li>
+                  <a href="#rates">Rates</a>
+                </li>
+                <li>
+                  <a href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <div className="byline">
+              <div>Salt Lake City's premiere memorial center</div>
+              <a href="tel:+18017466913" className="callButton">
+                CALL NOW TO BOOK AN EVENT!
+              </a>
+            </div>
           </div>
         </Header>
         <About />
-
         <Events />
-
         <Rates />
-
         <Contact />
       </div>
-    );
+    )
   }
 }
