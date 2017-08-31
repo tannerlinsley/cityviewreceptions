@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
-import { injectGlobal } from 'styled-components'
-import reset from 'styled-reset'
+import React, { Component } from "react";
+import styled from "styled-components";
+import { injectGlobal } from "styled-components";
+import reset from "styled-reset";
 //
-import Rates from './home/Rates'
-import About from './home/About'
-import Events from './home/Events'
-import Contact from './home/Contact'
+import Rates from "./home/Rates";
+import About from "./home/About";
+import Events from "./home/Events";
+import Contact from "./home/Contact";
 
 injectGlobal`
   ${reset}
@@ -14,7 +14,7 @@ injectGlobal`
     font-family: 'Lato', sans-serif;
     line-height: 1.3rem;
   }
-`
+`;
 
 const Header = styled.div`
   font-weight: 300;
@@ -40,7 +40,6 @@ const Header = styled.div`
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
 
   .navbar {
@@ -54,7 +53,7 @@ const Header = styled.div`
       font-size: 3rem;
       line-height: 3rem;
       font-weight: 300;
-      text-align: left;
+      text-align: center;
       color: white;
       padding: 1rem 1.5rem;
       text-shadow: 0 0 2rem black, 0 0 2rem black;
@@ -76,7 +75,6 @@ const Header = styled.div`
 
         :hover {
           transform: translateY(-.2rem);
-          box-shadow: 0 15px -10px 0 white;
         }
       }
     }
@@ -95,7 +93,7 @@ const Header = styled.div`
     color: white;
     text-shadow: 0 0 .7rem black, 0 0 .7rem black;
 
-    > div {
+    div {
       margin-bottom: 1rem;
     }
 
@@ -115,10 +113,11 @@ const Header = styled.div`
 
       :hover {
         background-color: rgba(37, 99, 164, 0.88);
+        transform: scale(1.05);
       }
     }
   }
-`
+`;
 
 export default class Home extends Component {
   render() {
@@ -157,6 +156,6 @@ export default class Home extends Component {
         <Rates />
         <Contact />
       </div>
-    )
+    );
   }
 }
