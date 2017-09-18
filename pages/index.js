@@ -2,7 +2,10 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { injectGlobal } from 'styled-components'
 import reset from 'styled-reset'
+import Link from 'next/link'
 //
+import ScrollTo from './utils/ScrollTo'
+
 import Rates from './home/Rates'
 import About from './home/About'
 import Events from './home/Events'
@@ -121,6 +124,20 @@ const Header = styled.div`
 `
 
 export default class Home extends Component {
+  componentDidMount() {
+    this.interval =
+      this.interval ||
+      setInterval(() => {
+        const els = Array.from(document.querySelectorAll('[id]'))
+        els.forEach(el => {
+          el.scrollIntoView = () => ScrollTo(el)
+          el.scrollIntoViewIfNeeded = () => ScrollTo(el)
+        })
+      }, 500)
+  }
+  componentWillUnmount() {
+    clearInterval(this.interval)
+  }
   render() {
     return (
       <div>
@@ -131,16 +148,24 @@ export default class Home extends Component {
               <h1 className="logo">City View Memoriam</h1>
               <ul className="menu">
                 <li>
-                  <a href="#about">About</a>
+                  <Link href="#about">
+                    <a>About</a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#events">Events</a>
+                  <Link href="#events">
+                    <a>Events</a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#rates">Rates</a>
+                  <Link href="#rates">
+                    <a>Rates</a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#contact">Contact</a>
+                  <Link href="#contact">
+                    <a>Contact</a>
+                  </Link>
                 </li>
               </ul>
             </div>
