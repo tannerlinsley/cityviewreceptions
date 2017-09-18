@@ -31,9 +31,9 @@ const Header = styled.div`
   .gradient {
     z-index: 0;
     width: 100%;
-    height: 50%;
+    height: 100%;
     position: absolute;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, .7), transparent);
+    ${'' /* background: linear-gradient(to bottom, rgba(0, 0, 0, .7), transparent); */} background: rgba(0, 0, 0, .6);
   }
 
   .content {
@@ -53,13 +53,27 @@ const Header = styled.div`
     flex-wrap: wrap;
 
     .logo {
-      font-size: 3rem;
-      line-height: 3rem;
-      font-weight: 300;
-      text-align: center;
-      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
       padding: 1rem 1.5rem;
-      text-shadow: 0 0 2rem black, 0 0 2rem black;
+      flex-wrap: wrap;
+
+      img {
+        flex: 0;
+        height: 100px;
+        margin: 1rem;
+      }
+
+      h1 {
+        display: inline-block;
+        text-align: left;
+        font-size: 3rem;
+        line-height: 3rem;
+        font-weight: 300;
+        color: white;
+        text-shadow: 0 0 2rem black;
+      }
     }
 
     .menu {
@@ -73,7 +87,7 @@ const Header = styled.div`
         color: white;
         text-decoration: none;
         padding: 1rem;
-        text-shadow: 0 0 2rem black, 0 0 2rem black;
+        text-shadow: 0 0 2rem black;
         transition: all .15s ease-out;
 
         :hover {
@@ -144,7 +158,10 @@ export default class Home extends Component {
           <div className="gradient" />
           <div className="content">
             <div className="navbar">
-              <h1 className="logo">City View Memoriam</h1>
+              <div className="logo">
+                <img src="/static/img/logo.png" />
+                <h1>City View Memoriam</h1>
+              </div>
               <ul className="menu">
                 <li>
                   <Link href="#about">
