@@ -186,7 +186,7 @@ export default class Home extends Component {
               </ul>
             </div>
             <div className="byline">
-              <div>Salt Lake City's premiere memorial center</div>
+              <div>Salt Lake City's premiere reception center</div>
               <a href="tel:+18017466913" className="callButton">
                 CALL NOW TO BOOK AN EVENT!
               </a>
