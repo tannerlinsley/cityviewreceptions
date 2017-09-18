@@ -9,7 +9,9 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>My page</title>
+          <title>
+            City View Memoriam - Salt Lake City's premiere reception center
+          </title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link
             href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900"
