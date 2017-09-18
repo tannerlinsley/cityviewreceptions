@@ -23,8 +23,8 @@ const Header = styled.div`
   font-weight: 300;
   height: 100vh;
   width: 100%;
-  background: url(/static/img/party.jpg);
-  background-position: center;
+  background: url(/static/img/outside-from-right.jpg);
+  background-position: right;
   background-size: cover;
   position: relative;
 
@@ -49,7 +49,7 @@ const Header = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgba(255, 255, 255, .7);
     flex-wrap: wrap;
 
     .logo {

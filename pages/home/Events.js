@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React, { Component } from 'react'
+import styled from 'styled-components'
 
 const Events = styled.div`
   position: relative;
   padding: 5em 2rem;
   line-height: 2rem;
-  background: url(/static/img/wine.jpg);
+  background: url(/static/img/party.jpg);
   background-position: center;
   background-size: cover;
   color: white;
@@ -35,7 +35,7 @@ const Events = styled.div`
     text-align: center;
     margin-bottom: 2rem;
   }
-`;
+`
 
 export default () =>
   <Events id="events">
@@ -50,4 +50,4 @@ export default () =>
       experience the unparalleled beauty of our facilities.
     </div>
     <div className="background" />
-  </Events>;
+  </Events>
