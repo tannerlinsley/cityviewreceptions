@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React, { Component } from 'react'
+import styled from 'styled-components'
 //
-import { List, Item } from "../components/Layout";
+import { List, Item } from '../components/Layout'
 
 const Rates = styled.div`
   padding: 8rem 0;
@@ -54,7 +54,7 @@ const Rates = styled.div`
     font-style: italic;
     opacity: 0.7;
   }
-`;
+`
 
 export default () =>
   <Rates id="rates">
@@ -73,7 +73,7 @@ export default () =>
           <Item>One staff member for assistance during event</Item>
         </List>
         <div className="info">
-          <br />$100 of that $995 potentially refundable cleaning deposit
+          <br />Up to $100 refundable cleaning deposit
           <br />$100 – additional hourly charge
         </div>
       </div>
@@ -90,9 +90,9 @@ export default () =>
           <Item>One staff member for assistance during event</Item>
         </List>
         <div className="info">
-          <br />$100 of that $495 potentially refundable cleaning deposit
+          <br />Up to $100 refundable cleaning deposit
           <br />$100 – additional hourly charge
         </div>
       </div>
     </div>
-  </Rates>;
+  </Rates>
