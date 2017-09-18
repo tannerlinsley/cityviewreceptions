@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React, { Component } from 'react'
+import styled from 'styled-components'
 
 const Contact = styled.div`
   padding: 5rem 2rem;
-  background: rgba(19, 18, 15, 0.75);
+  background: rgba(19, 18, 15, 0.90);
   background-position: center;
   background-size: cover;
   color: white;
@@ -39,7 +39,7 @@ const Contact = styled.div`
     border-radius: .3rem;
     margin: .5rem;
   }
-`;
+`
 
 export default () =>
   <Contact id="contact">
@@ -58,4 +58,4 @@ export default () =>
         </a>
       </div>
     </div>
-  </Contact>;
+  </Contact>
