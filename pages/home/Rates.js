@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
+import React, { Component } from "react";
+import styled from "styled-components";
 //
-import { List, Item } from '../components/Layout'
+import { List, Item } from "../components/Layout";
 
 const Rates = styled.div`
   padding: 8rem 0;
@@ -28,7 +28,7 @@ const Rates = styled.div`
     margin: 0 auto 0 auto;
     line-height: 1.65;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     font-size: 1rem;
 
@@ -54,7 +54,7 @@ const Rates = styled.div`
     font-style: italic;
     opacity: 0.7;
   }
-`
+`;
 
 export default () =>
   <Rates id="rates">
@@ -95,4 +95,4 @@ export default () =>
         </div>
       </div>
     </div>
-  </Rates>
+  </Rates>;

@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
+import React, { Component } from "react";
+import styled from "styled-components";
 
 const Contact = styled.div`
   padding: 5rem 2rem;
@@ -12,7 +12,7 @@ const Contact = styled.div`
   .header {
     font-size: 1.5rem;
     text-align: center;
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
     text-shadow: 0 0 .05rem black, 0 0 .05rem black;
   }
 
@@ -30,9 +30,6 @@ const Contact = styled.div`
     font-size: 1rem;
     line-height: 2rem;
   }
-  .info {
-    font-size: 1.1rem;
-  }
   .phone {
     display: block;
     text-decoration: none;
@@ -42,18 +39,17 @@ const Contact = styled.div`
     border-radius: .3rem;
     margin: .5rem;
   }
-`
+`;
 
 export default () =>
   <Contact id="contact">
     <div className="header">Contact Us</div>
-    <br />
     <div className="columns">
       <div className="column">
         Give us a call for more information about our building and services. We
         are happy to assist you in planning your upcoming event.
       </div>
-      <div className="column info">
+      <div className="column">
         <div>City View Memoriam</div>
         <div>1001 East 11th Avenue</div>
         <div>Salt Lake City, UT 84103</div>
@@ -62,4 +58,4 @@ export default () =>
         </a>
       </div>
     </div>
-  </Contact>
+  </Contact>;

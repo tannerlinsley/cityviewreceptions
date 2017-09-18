@@ -43,7 +43,6 @@ const Header = styled.div`
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
 
   .navbar {
@@ -57,7 +56,7 @@ const Header = styled.div`
       font-size: 3rem;
       line-height: 3rem;
       font-weight: 300;
-      text-align: left;
+      text-align: center;
       color: white;
       padding: 1rem 1.5rem;
       text-shadow: 0 0 2rem black, 0 0 2rem black;
@@ -79,7 +78,6 @@ const Header = styled.div`
 
         :hover {
           transform: translateY(-.2rem);
-          box-shadow: 0 15px -10px 0 white;
         }
       }
     }
@@ -98,7 +96,7 @@ const Header = styled.div`
     color: white;
     text-shadow: 0 0 .7rem black, 0 0 .7rem black;
 
-    > div {
+    div {
       margin-bottom: 1rem;
     }
 
@@ -118,6 +116,7 @@ const Header = styled.div`
 
       :hover {
         background-color: rgba(37, 99, 164, 0.88);
+        transform: scale(1.05);
       }
     }
   }
