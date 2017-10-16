@@ -27,6 +27,7 @@ const Rates = styled.div`
   background-image: url(/img/wedding.jpg);
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 
   .backing {
     z-index: 0;
