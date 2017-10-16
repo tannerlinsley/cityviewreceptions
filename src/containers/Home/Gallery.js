@@ -31,7 +31,7 @@ const Gallery = styled.div`
       background-size: cover;
       transition: 0.3s ease-out;
       z-index: 0;
-      opacity: 0.8;
+      opacity: 0.9;
       border-radius: 0.25rem;
 
       :hover {
@@ -49,14 +49,17 @@ export default () => (
     <div className="header">Gallery</div>
     <div className="images">
       {images.map(image => (
-        <Link
+        <a
           key={image}
-          to={`/img/gallery/thumbs/${image}`}
+          href={`/img/gallery/${image}`}
+          target="_blank"
           className="image"
           style={{
             backgroundImage: `url(/img/gallery/thumbs/${image})`,
           }}
-        />
+        >
+          &nbsp;
+        </a>
       ))}
     </div>
   </Gallery>
