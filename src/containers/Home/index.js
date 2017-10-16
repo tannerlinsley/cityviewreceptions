@@ -100,7 +100,7 @@ const Header = styled.div`
   width: 100%;
   background: url(/img/blossoms.jpg);
   background-attachment: fixed;
-  background-position: right;
+  background-position: center;
   background-size: cover;
   position: relative;
 

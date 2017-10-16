@@ -26,7 +26,7 @@ export default {
       return (
         <Html>
           <Head>
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
             <title>City View Memoriam - Salt Lake City{"'"}s premiere reception center</title>
             <link
               href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900"
