@@ -4,10 +4,12 @@ import { Component } from 'react'
 export default class ClickOutside extends Component {
   componentDidMount () {
     document.addEventListener('click', this.handle, true)
+    document.addEventListener('touchstart', this.handle, true)
   }
 
   componentWillUnmount () {
     document.removeEventListener('click', this.handle, true)
+    document.removeEventListener('touchstart', this.handle, true)
   }
 
   getContainer = ref => {
