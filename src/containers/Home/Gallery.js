@@ -1,9 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 //
-import Link from 'components/Link'
 
-const images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg']
+const images = ['1.jpg', '2.jpg', '3.jpg']
 
 const Gallery = styled.div`
   padding: 3rem 0;
@@ -22,7 +21,8 @@ const Gallery = styled.div`
     width: 800px;
     margin: 0 auto;
     flex-wrap: wrap;
-    padding: 1% 0 1% 1%;
+    justify-content: center;
+    padding: 1% 0.5%;
 
     .image {
       width: 47%;
@@ -33,6 +33,11 @@ const Gallery = styled.div`
       z-index: 0;
       opacity: 0.9;
       border-radius: 0.25rem;
+
+      @media (max-width: 500px) {
+        width: 99%;
+        padding-top: 66.66%;
+      }
 
       :hover {
         opacity: 1;

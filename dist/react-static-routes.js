@@ -1,17 +1,41 @@
 
     import React, { Component } from 'react'
-    import { Switch, Route } from 'react-router-dom'
+    import { Route } from 'react-router-dom'
 
-    import src_containers_Home from '../src/containers/Home'
-import src_containers____ from '../src/containers/404'
+    import src_containers_Home from '/Users/tannerlinsley/GitHub/cityviewmemoriam/src/containers/Home'
+import src_containers____ from '/Users/tannerlinsley/GitHub/cityviewmemoriam/src/containers/404'
+    const templateMap = {
+    t_0: src_containers_Home,
+t_1: src_containers____
+  }
+    const templateTree = {c:{"404":{t:"t_1"},"/":{t:"t_0"}}}
+    
+    const getTemplateForPath = path => {
+      const parts = path === '/' ? ['/'] : path.split('/').filter(d => d)
+      let cursor = templateTree
+      try {
+        parts.forEach(part => {
+          cursor = cursor.c[part]
+        })
+        return templateMap[cursor.t]
+      } catch (e) {
+        return false
+      }
+    }
+  
 
     export default class Routes extends Component {
       render () {
         return (
-          <Switch>
-              <Route exact path={'/'} component={src_containers_Home} />
-              <Route component={src_containers____} />
-          </Switch>
+            
+    <Route path='*' render={props => {
+      let Template = getTemplateForPath(props.location.pathname)
+      if (!Template) {
+        Template = getTemplateForPath('404')
+      }
+      return Template && <Template {...props} />
+    }} />
+  
         )
       }
     }

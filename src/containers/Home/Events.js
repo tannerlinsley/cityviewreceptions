@@ -9,6 +9,7 @@ const Events = styled.div`
   background-position: center;
   background-size: cover;
   color: white;
+  z-index: 0;
 
   .content {
     position: relative;
