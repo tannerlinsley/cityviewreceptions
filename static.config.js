@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { ServerStyleSheet } from 'styled-components'
 
 export default {
+  siteRoot: 'https://cityvieweventcenter.com',
   getRoutes: async () => [
     {
       path: '/',
@@ -18,7 +19,7 @@ export default {
     meta.styleTags = sheet.getStyleElement()
     return html
   },
-  Html: class CustomHtml extends Component {
+  Document: class CustomHtml extends Component {
     render () {
       const { Html, Head, Body, children, renderMeta } = this.props
 
