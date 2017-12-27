@@ -36,7 +36,7 @@ export default () => (
       <div className="header">About</div>
       <div className="content">
         An Architectural treasure in the heart of Salt Lake City, just a step away from the State
-        Capitol and directly above the Salt Lake City Cemetery. City View Reception Center, with its
+        Capitol and directly above the Salt Lake City avenues. City View Reception Center, with its
         magnificent art deco Tiffany windows has perfected the art of elegance, comfort, and
         tradition.
         <br />

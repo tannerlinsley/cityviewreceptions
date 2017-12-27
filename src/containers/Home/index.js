@@ -127,7 +127,7 @@ const Header = styled.div`
     img {
       background: rgba(255, 255, 255, 0.8);
       width: 200px;
-      padding: 1rem 1.5rem;
+      padding: 0.5rem;
       border-radius: 0.25rem;
     }
   }
