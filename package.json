@@ -8,6 +8,7 @@
     "build": "react-static build",
     "serve": "serve dist -p 3000"
   },
+  "engines": { "node": ">=8" },
   "dependencies": {
     "axios": "^0.16.2",
     "raf": "^3.4.0",
