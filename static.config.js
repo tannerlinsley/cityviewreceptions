@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { ServerStyleSheet } from 'styled-components'
 
 export default {
-  siteRoot: 'https://cityvieweventcenter.com',
+  siteRoot: 'https://cityviewevents.com',
   getRoutes: async () => [
     {
       path: '/',
