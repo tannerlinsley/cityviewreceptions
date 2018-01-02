@@ -151,7 +151,7 @@ export default class extends React.Component {
           </div>
         </div>
         <div className="copyright">
-          Copyright &copy; {new Date().getYear() + 1900} City View Memorium
+          Copyright &copy; {new Date().getYear() + 1900} City View Receptions
         </div>
       </Contact>
     )
