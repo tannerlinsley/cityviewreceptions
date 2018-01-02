@@ -108,7 +108,7 @@ export default class extends React.Component {
           }}
         >
           {({ submitForm }) => (
-            <form onSubmit={submitForm}>
+            <form name="contact" netlify onSubmit={submitForm}>
               <div>
                 <div>Name</div>
                 <Text field="name" placeholder="John Doe" />
