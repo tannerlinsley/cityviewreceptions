@@ -50,7 +50,7 @@ export default () => (
         you in planning your upcoming event.
       </div>
       <div className="column">
-        <div>City View Memoriam</div>
+        <div>City View Receptions</div>
         <div>1001 East 11th Avenue</div>
         <div>Salt Lake City, UT 84103</div>
         <a href="tel:+18017466913" className="phone">

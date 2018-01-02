@@ -42,11 +42,11 @@ export default () => (
   <Events id="events">
     <div className="content">
       <div className="header">Events</div>
-      City View Memoriam provides a beautiful and elegant place to celebrate your significant event,
-      be it a wedding, memorial for a departed loved one, or family gathering. Our grounds,
-      buildings and gardens stand as a highlight and foil to your important occasion. The
-      unparalleled view of the Salt Lake Valley provides not only the finest view of our valley, but
-      provides opportunities for reflection. We invite you to come yourself and experience the
+      City View Reception center provides a beautiful and elegant place to celebrate your
+      significant event, be it a wedding, memorial for a departed loved one, or family gathering.
+      Our grounds, buildings and gardens stand as a highlight and foil to your important occasion.
+      The unparalleled view of the Salt Lake Valley provides not only the finest view of our valley,
+      but provides opportunities for reflection. We invite you to come yourself and experience the
       unparalleled beauty of our facilities.
     </div>
     <div className="background" />
