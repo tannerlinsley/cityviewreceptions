@@ -1,0 +1,2 @@
+https://cityvieweventcenter.com/* https://cityviewreceptions.com/:splat 301!
+http://cityvieweventcenter.com/* https://cityviewreceptions.com/:splat 301!
