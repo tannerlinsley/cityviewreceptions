@@ -28,6 +28,10 @@ export default {
           <Head>
             <meta charSet="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+            <meta
+              name="google-site-verification"
+              content="kJeojbTy8TXqKdgfOQh7vcMR4hxawvw95D7_50Dlrmg"
+            />
             <title>City View Receptions - Salt Lake City's premiere reception center</title>
             <link
               href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900"
