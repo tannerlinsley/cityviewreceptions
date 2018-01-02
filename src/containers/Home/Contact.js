@@ -111,19 +111,24 @@ export default class extends React.Component {
             <form name="contact" netlify="true" onSubmit={submitForm}>
               <div>
                 <div>Name</div>
-                <Text field="name" placeholder="John Doe" />
+                <Text field="name" name="name" placeholder="John Doe" />
               </div>
               <div>
                 <div>Email</div>
-                <Text field="email" placeholder="johndoe@gmail.com" />
+                <Text field="email" name="email" placeholder="johndoe@gmail.com" />
               </div>
               <div>
                 <div>Phone</div>
-                <Text field="phone" placeholder="(555) 555-555" />
+                <Text field="phone" name="phone" placeholder="(555) 555-555" />
               </div>
               <div>
                 <div>Message</div>
-                <TextArea field="message" rows="5" placeholder="Your message to us :)" />
+                <TextArea
+                  field="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Your message to us :)"
+                />
               </div>
               <div>
                 <button type="submit">Submit</button>
