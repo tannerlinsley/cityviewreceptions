@@ -107,8 +107,8 @@ export default class extends React.Component {
             })
           }}
         >
-          {({ handleSubmit }) => (
-            <form onSubmit={handleSubmit}>
+          {({ submitForm }) => (
+            <form onSubmit={submitForm}>
               <div>
                 <div>Name</div>
                 <Text field="name" placeholder="John Doe" />
