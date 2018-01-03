@@ -65,6 +65,11 @@ const Contact = styled.div`
     }
   }
 
+  .thanks {
+    padding: 1rem;
+    color: rgb(254, 108, 138);
+  }
+
   .columns {
     display: flex;
     align-items: center;
@@ -96,46 +101,64 @@ const encode = data =>
     .join('&')
 
 export default class extends React.Component {
+  state = {
+    submitted: false,
+  }
   render () {
     return (
       <Contact id="contact">
         <div className="header">Contact Us</div>
-        <Form
-          onSubmit={values => {
-            axios.post('/', encode({ 'form-name': 'contact', ...values }), {
-              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            })
-          }}
-        >
-          {({ submitForm }) => (
-            <form name="contact" netlify="true" onSubmit={submitForm}>
-              <div>
-                <div>Name</div>
-                <Text field="name" name="name" placeholder="John Doe" />
-              </div>
-              <div>
-                <div>Email</div>
-                <Text field="email" name="email" placeholder="johndoe@gmail.com" />
-              </div>
-              <div>
-                <div>Phone</div>
-                <Text field="phone" name="phone" placeholder="(555) 555-555" />
-              </div>
-              <div>
-                <div>Message</div>
-                <TextArea
-                  field="message"
-                  name="message"
-                  rows="5"
-                  placeholder="Your message to us :)"
-                />
-              </div>
-              <div>
-                <button type="submit">Submit</button>
-              </div>
-            </form>
-          )}
-        </Form>
+        {this.state.submitted ? (
+          <p className="thanks">
+            Thanks for submitting your information! We'll be in contact with you as soon as
+            possible.
+          </p>
+        ) : (
+          <Form
+            onSubmit={async values => {
+              try {
+                await axios.post('/', encode({ 'form-name': 'contact', ...values }), {
+                  headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                })
+                this.setState({ submitted: true })
+              } catch (err) {
+                window.alert(
+                  'There was a problem submitting your form! Try again or reload the page :)',
+                )
+                this.setState({ submitted: true })
+              }
+            }}
+          >
+            {({ submitForm }) => (
+              <form name="contact" netlify="true" onSubmit={submitForm}>
+                <div>
+                  <div>Name</div>
+                  <Text field="name" name="name" placeholder="John Doe" />
+                </div>
+                <div>
+                  <div>Email</div>
+                  <Text field="email" name="email" placeholder="johndoe@gmail.com" />
+                </div>
+                <div>
+                  <div>Phone</div>
+                  <Text field="phone" name="phone" placeholder="(555) 555-555" />
+                </div>
+                <div>
+                  <div>Message</div>
+                  <TextArea
+                    field="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Your message to us :)"
+                  />
+                </div>
+                <div>
+                  <button type="submit">Submit</button>
+                </div>
+              </form>
+            )}
+          </Form>
+        )}
         <div className="columns">
           <div className="column">
             Or give us a call for more information about our building and services. We are happy to
