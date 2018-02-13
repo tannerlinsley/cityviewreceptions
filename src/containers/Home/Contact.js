@@ -4,12 +4,27 @@ import { Form, Text, TextArea } from 'react-form'
 import axios from 'axios'
 
 const Contact = styled.div`
+  z-index: 10000;
   padding: 5rem 2rem;
   background: rgba(19, 18, 15, 0.9);
   background-position: center;
   background-size: cover;
   color: white;
   text-align: center;
+  position: relative;
+
+  :after {
+    content: '';
+    display: block;
+    z-index: 9998;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 1rem 0;
+    border-bottom: 5px solid rgba(193, 150, 32, 0.8);
+  }
 
   .header {
     font-size: 1.5rem;
@@ -168,8 +183,8 @@ export default class extends React.Component {
             <div>City View Receptions</div>
             <div>1001 East 11th Avenue</div>
             <div>Salt Lake City, UT 84103</div>
-            <a href="tel:+18017466913" className="phone">
-              (801) 476 - 6913
+            <a href="tel:+8012901267" className="phone">
+              (801) 290 - 1267
             </a>
           </div>
         </div>

@@ -15,7 +15,7 @@
     "react-dom": "^16.0.0",
     "react-form": "^2.15.0",
     "react-router": "^4.2.0",
-    "react-static": "^4",
+    "react-static": "^5.1.8",
     "styled-components": "2.2.0",
     "styled-reset": "^0.1.2"
   },

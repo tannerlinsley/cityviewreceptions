@@ -2,38 +2,38 @@ import React from 'react'
 import styled from 'styled-components'
 
 const About = styled.div`
-  background: url(/img/blossoms2.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-
+  background: white;
   line-height: 2rem;
   text-shadow: 0 0 30px white, 0 0 30px white;
   box-shadow: 0 3px 40px 0 black;
   z-index: 1;
 
   .inner {
-    padding: 8rem 2rem;
+    padding: 5rem 2rem;
     background: rgba(255, 255, 255, 0.8);
-    box-shadow: inset 0 0 0 13px white, inset 0 0 0 15px rgba(215, 99, 148, 0.5);
+    text-align: center;
   }
   .header {
     font-size: 2rem;
     line-height: 2.5rem;
-    text-align: center;
-    margin-bottom: 2rem;
+    margin: 0 auto 2rem;
+    padding-bottom: 1rem;
+    color: #b5902a;
+    display: inline-block;
+    border-bottom: 5px solid #b5902a;
   }
   .content {
     width: 600px;
     max-width: 100%;
     margin: 0 auto;
+    text-align: left;
   }
 `
 
 export default () => (
   <About id="about">
     <div className="inner">
-      <div className="header">About</div>
+      <div className="header">About Us</div>
       <div className="content">
         An Architectural treasure in the heart of Salt Lake City, just a step away from the State
         Capitol and directly above the Salt Lake City avenues. City View Reception Center, with its
