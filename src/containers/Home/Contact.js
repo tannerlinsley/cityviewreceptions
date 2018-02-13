@@ -6,7 +6,7 @@ import axios from 'axios'
 const Contact = styled.div`
   z-index: 10000;
   padding: 5rem 2rem;
-  background: rgba(19, 18, 15, 0.9);
+  background: rgba(19, 18, 15, 0.95);
   background-position: center;
   background-size: cover;
   color: white;
@@ -181,7 +181,7 @@ export default class extends React.Component {
           </div>
           <div className="column">
             <div>City View Receptions</div>
-            <div>1001 East 11th Avenue</div>
+            <div>1001 East 11th Avenue, Suite B</div>
             <div>Salt Lake City, UT 84103</div>
             <a href="tel:+8012901267" className="phone">
               (801) 290 - 1267

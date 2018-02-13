@@ -202,17 +202,6 @@ const Photo2 = styled.div`
   box-shadow: 0 3px 40px 0 rgba(0, 0, 0, 0.3);
 `
 
-const Photo3 = styled.div`
-  font-weight: 300;
-  height: 60vh;
-  width: 100%;
-  background: url(/img/sarah-david-stairs.jpg);
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  box-shadow: 0 3px 40px 0 rgba(0, 0, 0, 0.3);
-`
-
 export default class Home extends Component {
   state = {
     isMenuOpen: false,
@@ -295,7 +284,7 @@ export default class Home extends Component {
         <Events />
         <Photo2 />
         <Gallery />
-        <Photo3 />
+        {/* <Photo3 /> */}
         <Rates />
         <Contact />
       </div>

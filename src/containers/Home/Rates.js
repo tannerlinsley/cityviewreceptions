@@ -11,6 +11,7 @@ export const List = styled.ul`
   border-radius: 0.3rem;
   background: white;
   box-shadow: 0 0.3rem 1rem -0.3rem rgba(0, 0, 0, 0.3);
+  color: black;
 `
 
 export const Item = styled.li`
@@ -22,12 +23,22 @@ export const Item = styled.li`
 
 const Rates = styled.div`
   position: relative;
-  padding: 8rem 0;
+  padding: 10rem 0 25rem;
   text-align: center;
-  background-image: url(/img/wedding.jpg);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+  color: white;
+  border-top: 5px solid rgb(34, 34, 34);
+
+  .backingPhoto {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(/img/sarah-david-stairs.jpg);
+    background-position: 50% 10%;
+    background-size: cover;
+  }
 
   .backing {
     z-index: 0;
@@ -36,7 +47,7 @@ const Rates = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(0, 0, 0, 0.4);
   }
 
   .header {
@@ -77,7 +88,7 @@ const Rates = styled.div`
     padding: 2rem 2rem;
 
     :first-child {
-      border-right: 1px solid black;
+      border-right: 3px solid rgba(255, 255, 255, 0.3);
 
       @media (max-width: 800px) {
         border-right: 0;
@@ -94,8 +105,9 @@ const Rates = styled.div`
 
 export default () => (
   <Rates id="rates">
-    <div className="header">Rates</div>
+    <div className="backingPhoto" />
     <div className="backing" />
+    <div className="header">Rates</div>
     <div className="content">
       <div className="column">
         <div className="subHeader">
