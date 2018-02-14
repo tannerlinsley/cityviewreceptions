@@ -26,7 +26,6 @@ const Rates = styled.div`
   padding: 10rem 0 25rem;
   text-align: center;
   color: white;
-  border-top: 5px solid rgb(34, 34, 34);
 
   .backingPhoto {
     z-index: 0;

@@ -5,10 +5,10 @@ import styled from 'styled-components'
 const images = [1, 2, 3, 4, 5, 6, 7, 8]
 
 const Gallery = styled.div`
-  padding: 3rem 0 0;
+  padding: 5rem 0 0;
   background: white;
   position: relative;
-  box-shadow: inset 0 0px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
 
   .header {
     position: relative;
@@ -16,7 +16,11 @@ const Gallery = styled.div`
     font-size: 2rem;
     line-height: 2.5rem;
     text-align: center;
-    margin: 0 0 2rem;
+    margin: 0 auto 2rem;
+    padding-bottom: 1rem;
+    color: #b5902a;
+    display: inline-block;
+    border-bottom: 5px solid #b5902a;
   }
 
   .images {
@@ -24,7 +28,7 @@ const Gallery = styled.div`
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 2.2rem;
+    padding: 2.2rem 2.2rem 0.2rem;
 
     .image {
       flex: 1 0 300px;

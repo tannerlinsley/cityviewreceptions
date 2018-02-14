@@ -8,7 +8,6 @@ const Events = styled.div`
   background: white;
   z-index: 0;
   text-align: center;
-  box-shadow: inset 0 0px 20px rgba(0, 0, 0, 0.3);
 
   .header {
     position: relative;

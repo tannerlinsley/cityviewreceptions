@@ -5,7 +5,6 @@ const About = styled.div`
   background: white;
   line-height: 2rem;
   text-shadow: 0 0 30px white, 0 0 30px white;
-  box-shadow: 0 3px 40px 0 black;
   z-index: 1;
 
   .inner {
