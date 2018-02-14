@@ -3,11 +3,12 @@ import styled from 'styled-components'
 
 const Events = styled.div`
   position: relative;
-  padding: 9em 2rem;
+  padding: 4em 2rem;
   line-height: 2rem;
   background: white;
   z-index: 0;
   text-align: center;
+  box-shadow: inset 0 0px 20px rgba(0, 0, 0, 0.3);
 
   .header {
     position: relative;
@@ -28,16 +29,6 @@ const Events = styled.div`
     max-width: 100%;
     margin: 0 auto;
     text-align: left;
-  }
-
-  .background {
-    z-index: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(255, 255, 255, 0.8);
   }
 `
 

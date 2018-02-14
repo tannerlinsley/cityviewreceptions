@@ -2,22 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 //
 
-const images = ['1.jpg', '2.jpg', '3.jpg']
+const images = [1, 2, 3, 4, 5, 6, 7, 8]
 
 const Gallery = styled.div`
-  padding: 3rem 0;
+  padding: 3rem 0 0;
   background: white;
   position: relative;
-
-  .background {
-    z-index: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(255, 255, 255, 0.8);
-  }
+  box-shadow: inset 0 0px 20px rgba(0, 0, 0, 0.3);
 
   .header {
     position: relative;
@@ -30,33 +21,27 @@ const Gallery = styled.div`
 
   .images {
     display: flex;
-    max-width: calc(100% - 4rem);
-    width: 800px;
-    margin: 0 auto;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 1% 0.5%;
+    padding: 2.2rem;
 
     .image {
-      width: 47%;
-      margin: 1%;
-      padding-top: 33.33%;
+      flex: 1 0 300px;
+      padding-top: 25%;
       background-size: cover;
+      background-position: center;
       transition: 0.2s ease-out;
-      z-index: 0;
       opacity: 0.9;
-      border-radius: 0.25rem;
+      box-shadow: inset 0 0 0 3px white;
 
-      @media (max-width: 500px) {
-        width: 99%;
-        padding-top: 66.66%;
+      @media (max-width: 800px) {
+        flex: 1 0 50%;
+        padding-top: 50%;
       }
 
       :hover {
         opacity: 1;
-        transform: scale(1.01);
-        z-index: 1;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
       }
     }
   }
@@ -70,11 +55,11 @@ export default () => (
       {images.map(image => (
         <a
           key={image}
-          href={`/img/gallery/${image}`}
+          href={`/img/gallery/${image}.jpg`}
           target="_blank"
           className="image"
           style={{
-            backgroundImage: `url(/img/gallery/thumbs/${image})`,
+            backgroundImage: `url(/img/gallery/thumbs/${image}.jpg)`,
           }}
         >
           &nbsp;
