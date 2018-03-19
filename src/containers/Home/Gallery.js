@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 //
 
-const images = [1, 2, 3, 4, 5, 6, 7, 8]
+const images = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 const Gallery = styled.div`
   padding: 5rem 0 0;
