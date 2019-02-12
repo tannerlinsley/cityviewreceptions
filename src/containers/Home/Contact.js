@@ -24,6 +24,7 @@ const Contact = styled.div`
     left: 0;
     margin: 1rem 0;
     border-bottom: 5px solid rgba(193, 150, 32, 0.8);
+    pointer-events: none;
   }
 
   .header {
@@ -167,6 +168,7 @@ export default class extends React.Component {
                     placeholder="Your message to us :)"
                   />
                 </div>
+                <div data-netlify-recaptcha="true" />
                 <div>
                   <button type="submit">Submit</button>
                 </div>
