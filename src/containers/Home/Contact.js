@@ -146,10 +146,24 @@ export default class extends React.Component {
             }}
           >
             {({ submitForm }) => (
-              <form name="contact" netlify="true" onSubmit={submitForm}>
+              <form
+                name="contact"
+                netlify="true"
+                netlify-honeypot="bot-field"
+                onSubmit={submitForm}
+              >
                 <div>
                   <div>Name</div>
                   <Text field="name" name="name" placeholder="John Doe" />
+                </div>
+                <div
+                  style={{
+                    height: 0,
+                    overflow: 'hidden',
+                  }}
+                >
+                  <div>Favorite Color</div>
+                  <Text field="bot-field" name="bot-field" />
                 </div>
                 <div>
                   <div>Email</div>
@@ -168,7 +182,7 @@ export default class extends React.Component {
                     placeholder="Your message to us :)"
                   />
                 </div>
-                <div data-netlify-recaptcha="true" />
+
                 <div>
                   <button type="submit">Submit</button>
                 </div>
